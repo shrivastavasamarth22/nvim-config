@@ -1,7 +1,8 @@
 require("samarth")
 
 -- Set options
-vim.wo.number = true
+vim.opt.nu = true
+vim.opt.relativenumber = true
 vim.opt.autoindent = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
@@ -12,6 +13,7 @@ vim.opt.encoding = "UTF-8"
 vim.opt.hidden = true
 vim.opt.completeopt:remove("preview")
 vim.wo.signcolumn = 'yes'
+vim.opt.termguicolors = true
 
 -- GUI settings
 vim.o.guifont = 'JetBrains Mono:h12'
