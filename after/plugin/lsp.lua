@@ -24,7 +24,6 @@ lsp.set_preferences({
 })
 
 lsp.on_attach(function(client, bufnr)
-	print("help")
 	local opts = { buffer = bufnr, remap = false }
 
 	-- Keybindings for LSP
