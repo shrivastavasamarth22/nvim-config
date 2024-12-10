@@ -14,6 +14,9 @@ vim.opt.hidden = true
 vim.opt.completeopt:remove("preview")
 vim.wo.signcolumn = 'yes'
 vim.opt.termguicolors = true
+vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.showbreak = "↪"
 
 -- GUI settings
 vim.o.guifont = 'JetBrains Mono:h12'
