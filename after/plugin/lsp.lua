@@ -30,6 +30,7 @@ require('mason-lspconfig').setup({
     'clangd',         -- C++
 		'jsonls',         -- jsonls
 		'emmet_ls',       -- emmet_ls
+		'lua_ls',         -- lua
   },
   handlers = {
     lsp_zero.default_setup,
@@ -71,6 +72,18 @@ require('lspconfig').tailwindcss.setup {
           { "cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]" },
           { "cx\\(([^)]*)\\)", "(?:'|\")([^\"'`]*)(?:'|\")" },
         },
+      },
+    },
+  },
+}
+
+-- Lua LSP specific configuration to resolve 'Undefined global vim' warning
+require('lspconfig').lua_ls.setup {
+  settings = {
+    Lua = {
+      diagnostics = {
+        -- Recognize the 'vim' global
+        globals = {'vim'},
       },
     },
   },
