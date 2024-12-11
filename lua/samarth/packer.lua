@@ -60,5 +60,7 @@ return require('packer').startup(function(use)
 			{'L3MON4D3/LuaSnip'},
 			{'rafamadriz/friendly-snippets'},
 		}
-	}	
+	}
+	use{'echasnovski/mini.icons', branch = 'stable'}
+	use('RRethy/vim-illuminate')
 end)
