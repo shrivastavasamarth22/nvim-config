@@ -17,5 +17,5 @@ vim.opt.linebreak = true
 vim.opt.showbreak = "↪"
 
 -- GUI settings
-vim.o.guifont = 'JetBrains Mono:h12'
+vim.o.guifont = 'JetBrains Mono:h10'
 vim.g.neovide_transparency = 0.95

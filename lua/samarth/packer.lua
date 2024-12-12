@@ -63,4 +63,7 @@ return require('packer').startup(function(use)
 	}
 	use{'echasnovski/mini.icons', branch = 'stable'}
 	use('RRethy/vim-illuminate')
+	require('packer').startup(function()
+		use {'stevearc/dressing.nvim'}
+	end)
 end)
