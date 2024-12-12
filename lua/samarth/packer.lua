@@ -63,7 +63,34 @@ return require('packer').startup(function(use)
 	}
 	use{'echasnovski/mini.icons', branch = 'stable'}
 	use('RRethy/vim-illuminate')
-	require('packer').startup(function()
-		use {'stevearc/dressing.nvim'}
-	end)
+	use{'stevearc/dressing.nvim'}
+	use {
+		'folke/which-key.nvim',
+		event = 'VimEnter', -- Equivalent to lazy loading, replace with 'VeryLazy' logic if needed
+		config = function()
+			require('which-key').setup {
+				-- your configuration comes here
+				-- or leave it empty to use the default settings
+				-- refer to the configuration section below
+			}
+
+			-- Key mappings
+			vim.api.nvim_set_keymap(
+			'n',
+			'<leader>?',
+			"<cmd>lua require('which-key').show({ global = false })<CR>",
+			{ noremap = true, silent = true, desc = "Buffer Local Keymaps (which-key)" }
+			)
+		end
+	}
+	use({
+		"kylechui/nvim-surround",
+		tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+		config = function()
+			require("nvim-surround").setup({
+				-- Configuration here, or leave empty to use defaults
+			})
+		end
+	})
+
 end)
