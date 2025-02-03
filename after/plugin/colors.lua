@@ -1,6 +1,6 @@
 function ColorMyPencils(color)
 	vim.opt.termguicolors = true
-	color = color or "sequoia_retro"
+	color = color or "darkbox"
 	vim.cmd.colorscheme(color)
 end
 

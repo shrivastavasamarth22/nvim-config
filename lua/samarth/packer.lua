@@ -16,9 +16,6 @@ return require('packer').startup(function(use)
   use({
 	'shrivastavasamarth22/sequoia_retro_nvim',
 	as = 'sequoia_retro_nvim',
-	config = function()
-		vim.cmd('colorscheme sequoia_retro')
-	end
   })
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
@@ -90,6 +87,14 @@ return require('packer').startup(function(use)
 			require("nvim-surround").setup({
 				-- Configuration here, or leave empty to use defaults
 			})
+		end
+	})
+
+	use({
+		"timmypidashev/darkbox.nvim",
+		lazy = false,
+		config = function ()
+			require("darkbox").load()
 		end
 	})
 
