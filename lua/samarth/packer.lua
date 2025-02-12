@@ -91,10 +91,9 @@ return require('packer').startup(function(use)
 	})
 
 	use({
-		"timmypidashev/darkbox.nvim",
-		lazy = false,
+		"neanias/everforest-nvim",
 		config = function ()
-			require("darkbox").load()
+			require("everforest").setup()
 		end
 	})
 
