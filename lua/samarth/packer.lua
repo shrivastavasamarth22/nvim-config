@@ -22,6 +22,7 @@ return require('packer').startup(function(use)
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
   use('tpope/vim-surround')
+	use('tpope/vim-commentary')
 	use('ryanoasis/vim-devicons')
 	use('vim-airline/vim-airline')
 	use('ap/vim-css-color')
@@ -94,6 +95,18 @@ return require('packer').startup(function(use)
 		"neanias/everforest-nvim",
 		config = function ()
 			require("everforest").setup()
+		end
+	})
+
+	use {'dasupradyumna/midnight.nvim'}
+
+	use({
+		"timmypidashev/darkbox.nvim",
+		lazy = true,
+		config = function()
+			require("darkbox").setup({
+				contrast = ""
+			})
 		end
 	})
 

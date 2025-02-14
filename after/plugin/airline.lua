@@ -1,6 +1,5 @@
 vim.g.airline_powerline_fonts = 1
-vim.g.airline_theme = "sequoia_retro"
-
+vim.g.airline_theme = 'sequoia_retro'
 if not vim.g.airline_symbols then
 	vim.g.airline_symbols = {}
 end

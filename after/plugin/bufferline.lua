@@ -22,7 +22,7 @@ require('bufferline').setup {
       background = { guifg = "#575861", guibg = "#1F2124" },
       buffer_visible = { guifg = "#b8b8b8", guibg = "#2A2A2A" },
       -- Add underline to selected bufferline
-      buffer_selected = { 
+      buffer_selected = {
         guifg = "#e8b246",  -- #e8b246 from your theme (IncSearch/WarningMsg)
         guibg = "#131317",  -- Dark background for selected buffer
         gui = "underline",   -- Underline for selected buffer
